@@ -50,10 +50,31 @@ const bigNumber = 5658435743985794358794759450347504570475040740n // now it is b
 // console.log(myfunction); // [Funtion: myfunction]
 // console.log(typeof outsideTemp); // Object (null ka object aya h)
 // console.log(typeof myfunction); // function (actually in documentatin me this is function object)
-console.log(typeof id); // symbol
-console.log(typeof anotherid); // symbol
-console.log(typeof bigNumber); // bigint
-console.log(typeof userEmail); //undefinded when i set undefined
-console.log(typeof useremail); // userdefined when i did not set userdefined
+// console.log(typeof id); // symbol
+// console.log(typeof anotherid); // symbol
+// console.log(typeof bigNumber); // bigint
+// console.log(typeof userEmail); //undefinded when i set undefined
+// console.log(typeof useremail); // userdefined when i did not set userdefined
 
+//******************************************************
+// stack(primitive) , heap(non-primitive)..
+let myyoutubename = "aldjglgj" /// stack me jayegi 
+
+let anothername =  myyoutubename
+anothername = "chai" // copy h to change ho jayegi
+// console.log(myyoutubename); // c
+// console.log(anothername);  // 
  
+
+//non - primitive // * heap me -- heap se refeerence lete time copy nahi original value ka reference milta h
+let userone = { /// yaha userone stack me and all the below code goes to heap
+    email: "useremal@.com",
+    upi: "user@ybl"
+
+}
+
+let user2 = userone 
+
+user2.email = "anjali@google.com"
+console.log(userone.email); // both are same anjali@google.com
+console.log(user2.email);
