@@ -52,6 +52,5 @@ console.log(newdate.getDate()); //24
 //To customize order of date and time
 newdate.toLocaleString('default', {
     // ctrl + space
-    weekday: 'long',
-       
+    weekday: 'long',       
 })
