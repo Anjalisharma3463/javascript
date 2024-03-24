@@ -26,12 +26,32 @@ let mydate = new Date()
 // console.log(mycreateddate1.toLocaleString()); //1/23/2023, 5:03:00 AM
 
 
-let mycreateddate = new Date("2023-01-14")   //01 = jan in  
-console.log(mycreateddate.toLocaleString()); // 1/14/2023 , 12:00:00 AM
+// let mycreateddate = new Date("2023-01-14")   //01 = jan in  
+// console.log(mycreateddate.toLocaleString()); // 1/14/2023 , 12:00:00 AM
   
 
-let mycreateddate2 = new Date("01-14-2023")   //0 = jan
-console.log(mycreateddate2.toLocaleString());
+let mycreateddate = new Date("01-14-2023")   //0 = jan
+// console.log(mycreateddate.toLocaleString()); //1/14/2023 12:00:00 AM  
 
- 
+let mytimestamp = Date.now()
+console.log(mytimestamp); // 171130524545
+console.log(mycreateddate.getTime());
 
+console.log(Math.floor(Date.now()/1000)); // to get second
+
+let newdate = new Date()
+console.log(newdate); //2024-03-24T18:41:340Z
+console.log(newdate.getMonth() +1); //3
+console.log(newdate.getDate()); //24
+
+//string interpulation
+// `${newdate.getDay()}` and the time is
+// console.log(`${newdate.getDate()} is new date today`);
+
+
+//To customize order of date and time
+newdate.toLocaleString('default', {
+    // ctrl + space
+    weekday: 'long',
+       
+})
