@@ -6,7 +6,7 @@
 
 const myarr1 = [0, 1, 2, 3 , 4 , 5]
 const myarr2 = [0 , 1 , 2 , "Array", true]
-const myHeroes = ["hero", "ssrk", "naagraj"]
+const myHeroes = ["hero", "ssrk" ]
 const myarr3 = new Array(1, 2, 3, 4)
 // console.log(myarr2[3]);
 
