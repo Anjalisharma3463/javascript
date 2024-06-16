@@ -1,10 +1,10 @@
 // singleton
 // singleton
-Object.create //(concstuctor) 
+Object.create //(constuctor) 
 
 
 // object literals
-const mysym =Symbol("key1")
+const mysym = Symbol("key1")
 
 const JsUser = {
     name: "anjali",
@@ -19,7 +19,7 @@ const JsUser = {
 }
 // console.log(JsUser.email); //1st
 // console.log(JsUser["email"]); // 2nd way~
-// console.log(JsUser["full name"]); //only one way using square notation
+// console.log(JsUser["name"]); //only one way using square notation
 // console.log(JsUser.mysym); // using symbol as key //mykey1
 // console.log(JsUser[mysym]); //myket . by iti s goot syntax
 // console.log( typeof(JsUser.mysym)); // string type
@@ -27,9 +27,9 @@ const JsUser = {
 
 
     JsUser.email =  "hatgpt@GamepadHapticActuator.com"
-    // Object.freeze(JsUser) // is line k baad no change n this object
+     Object.freeze(JsUser) // is line k baad no change n this object
     JsUser.email = "anjaswadkjgldgld"
-    // console.log(JsUser);
+     console.log(JsUser);
 
   JsUser.greeting = function(){
     console.log("hello js user;");
@@ -39,9 +39,10 @@ const JsUser = {
 //  //or
   console.log(JsUser.greeting()); // not a function now for now coz t was a freezeobject js user
 
-
+  // The code assigns a function to the greeting property of the JsUser object.
+  // After this assignment, greeting becomes a method of the JsUser object.
   JsUser.greeting = function(){
-    console.log( `hello this is jus user, ${this.name}`);
+    console.log( `hello this is js user, ${this.name}`);
   }  
 
 

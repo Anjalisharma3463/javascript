@@ -1,7 +1,7 @@
 //Temporal is an new API (as gloabal object like math namespacee)
 
-//DATES
-let mydate = new Date()
+// DATES
+
 // console.log(mydate); // 2024-03-24T17:22:35.0972z
 // console.log(mydate.toString());// sun mar 24 2024 17:24:16 GMT+0000(COORDINATE UNIVERSL TIME)
 // console.log(mydate.toDateString()); //sun mar 24 2024
@@ -30,27 +30,38 @@ let mydate = new Date()
 // console.log(mycreateddate.toLocaleString()); // 1/14/2023 , 12:00:00 AM
   
 
-let mycreateddate = new Date("01-14-2023")   //0 = jan
+// let mycreateddate = new Date("01-14-2023")   //0 = jan
 // console.log(mycreateddate.toLocaleString()); //1/14/2023 12:00:00 AM  
 
-let mytimestamp = Date.now()
-console.log(mytimestamp); // 171130524545
-console.log(mycreateddate.getTime());
+// let mytimestamp = Date.now()
+// console.log(mytimestamp); // 171130524545
+// console.log(mycreateddate.getTime());
 
-console.log(Math.floor(Date.now()/1000)); // to get second
+// console.log(Math.floor(Date.now()/1000)); // to get second
 
-let newdate = new Date()
-console.log(newdate); //2024-03-24T18:41:340Z
-console.log(newdate.getMonth() +1); //3
-console.log(newdate.getDate()); //24
+// // Date.now(): Again, this method returns the current timestamp in milliseconds.
+// // / 1000: Divides the timestamp by 1000 to convert milliseconds to seconds.
+// // Math.floor(): This function rounds down to the nearest whole numb
 
-//string interpulation
-// `${newdate.getDay()}` and the time is
-// console.log(`${newdate.getDate()} is new date today`);
+// let newdate = new Date()
+// console.log(newdate); //2024-03-24T18:41:340Z
+// console.log(newdate.getMonth() +1); //3
+// console.log(newdate.getDate()); //24
+
+// string interpulation
+let mydate = new Date()
+ 
+console.log(`${mydate.getDate()} is new date today`);
 
 
 //To customize order of date and time
-newdate.toLocaleString('default', {
+let store = mydate.toLocaleString('default', {
     // ctrl + space
-    weekday: 'long',       
-})
+    weekday: 'long',
+    month: 'long',
+    date: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit'       
+});
+
+console.log(store);
