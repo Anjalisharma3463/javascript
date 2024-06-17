@@ -80,6 +80,39 @@ const course = {
 
 console.log(course.course_teacher); 
   //OR 
+const {course_teacher } = course // course obje se value extract krni h
+   //console.log(course_teacher); //hitesh 
+ 
 const {course_teacher : ins} = course // course obje se value extract krni h
- //console.log(course_teacher); //hitesh
- console.log(ins); //..hitesh
+ console.log(ins); //..hitesh 
+
+
+
+ //har baar props. propas. nah likhna ho to use curly braces like this 
+ //const navbar = ({company}) => {
+  //}
+  //objects ko destructure krna
+ const navbar = ( props.company) => {
+
+ }
+   
+ navbar(company = "anjali" )
+
+
+ //apna kaam kisi or pe dallna is called APIs
+ /// values ko dena by backend khud dko .. pehle xml k format me atti th values by backend
+ 
+ //json object ki h bass naam nahi h 
+ //bass json me key and value both string hoti h
+ {
+  
+  "name": "anjali",
+  "coursename": "js in hndi",
+ " price": "free"
+ }
+ //API K andar fetch method use krke url use kre k respones me koi data milega in json format
+ // kahi baar apis array ki format me bhi milti h nor only n object
+ 
+ //Randonuserme.api
+//api k data (result ko smjhne k liye . we can use json formatter tools) 
+
