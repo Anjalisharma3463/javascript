@@ -16,7 +16,7 @@ switch (month /*key*/) {
     case 2/*value*/:
         console.log("Feb");
         break;
-    case "march"/*value*/:
+    case "3"/*value*/:
         console.log("march");
         break;
     case 4/*value*/:

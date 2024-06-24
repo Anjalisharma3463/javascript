@@ -9,38 +9,38 @@ const user = {
     
 }
 
-// user.welcomeMessage()
+user.welcomeMessage()
 
-// user.username = "Arjun"
-// user.welcomeMessage()
+user.username = "Arjun"
+user.welcomeMessage()
 
-// console.log(this); // {}
+console.log(this); // {}
 
-// node environment me kyu ki global me koi context nahi h
-// but browser me window dikhte h .. n
-// browser me engine window h // engine ko node s banaya . deno .s banaya 
-// bun naam diyia enginga ko . node . deno naam diya engine lko
+node environment me kyu ki global me koi context nahi h
+but browser me window dikhte h .. n
+browser me engine window h // engine ko node s banaya . deno .s banaya 
+bun naam diyia enginga ko . node . deno naam diya engine lko
 
 
 
-// function chai( ){
-//     console.log(this)
-// }
-// chai()
-// // bhot kuch obect n all show hoga
+function chai( ){
+    console.log(this)
+}
+chai()
+// bhot kuch obect n all show hoga
 
-// function chai( ){
-//     console.log(this.username) // undefined
-// }
-// chai()
-
+function chai( ){
+    console.log(this.username) // undefined
+}
+chai()
+// function greet(name){}
 const chai3   = function(naam) {
     let ans = "hitesh"
     // console.log(this.naam);  underfined
 //    console.log(this); empty {}
 }
 
-// function ki jagah arrow use bass
+ 
 const chai =  () => {
     let username = "hitesh"
     // console.log(this.username);  underfined

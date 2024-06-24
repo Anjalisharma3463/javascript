@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    document kis object model se bana hua h
+    console me jake console.log(window) likho ya fhir console.log(document)yaa  fhir console.dir(document) yaa fhir base url ka kisi or ko access krna h toh write console.log(document.baseURI) and document.getElementbyId('firstheading')
+    <title>DOM  Learnings</title>
+    you can change things by gui or cl also on webpaege by inspect --> document.getElementbyId('first heading').innerHTML = "<h1> chai or code </h1>"
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading" >DOM learning on chai or code</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus magni excepturi deserunt qui distinctio corporis velit numquam. Nobis natus quis earum fugit, tenetur est. Inventore eaque saepe est ratione totam!</p>
+         
+    </div>
+</body>s
+</html>
+
+This is document obejct Model..
+
+window 
+ |
+ |
+ \/
+ document
+ |
+ |
+ \/
+html
+|
+|
+\/
+head      and                   body
+|                                  |
+|                                  |
+\/                                 \/
+ title and meta                   div -> attribute ,class
+ |           |                     |
+ |           |                     |
+ \/          \/                    \/
+ text node  (attribute)  (attrivute<-h1 )    and   p -> text node
+                                   | 
+                                   \/  
+                                text code

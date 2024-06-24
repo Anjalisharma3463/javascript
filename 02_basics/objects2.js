@@ -5,27 +5,27 @@ const tinderuser = {} // non-single object
  tinderuser.name = "anjali"
  tinderuser.isloggedIn = false
 
-//  console.log(tinderuser);
+ console.log(tinderuser);
 
-//  const regularUser = {
-//     email: "somegaim2@gmal.com",
-//     fullname: {
-//           userfullname: {
-//              firstname: "anjali",
-//             lastname: "sharma"
-//           }
-//     }
-//  }
+ const regularUser = {
+    email: "somegaim2@gmal.com",
+    fullname: {
+          userfullname: {  
+             firstname: "anjali",
+            lastname: "sharma"
+          }
+    }
+ }
 // if full name me kchh values h to print kro like if conditions
- // console.log(regularUser.fullname?.userfullname);
- // if userfullname will be empty then output will be {}
-  // ?.: The optional chaining operator checks if fullname is not null or undefined before trying to access userfullname. If fullname is null or undefined, the expression will short-circuit and return undefined without throwing an error.
-  // userfullname: Accesses the userfullname property inside fullname.
+//  console.log(regularUser.fullname?.userfullname);
+//  if userfullname will be empty then output will be {}
+//   ?.: The optional chaining operator checks if fullname is not null or undefined before trying to access userfullname. If fullname is null or undefined, the expression will short-circuit and return undefined without throwing an error.
+//   userfullname: Accesses the userfullname property inside fullname.
 
 
 
-  // const obje1 = {1: "a", 2: "b"}
-  // const obje2 = {3: "a", 4: "b"}
+  const obje1 = {1: "a", 2: "b"}
+  const obje2 = {3: "a", 4: "b"}
 
 //  const obje3 = { obje1, obje2}
 //  console.log(obje3); //{ obje1: { '1': 'a', '2': 'b' }, obje2: { '3': 'b' } }
@@ -86,7 +86,8 @@ const {course_teacher } = course // course obje se value extract krni h
 const {course_teacher : ins} = course // course obje se value extract krni h
  console.log(ins); //..hitesh 
 
-
+const {course : print} = course
+console.log(print);
 
  //har baar props. propas. nah likhna ho to use curly braces like this 
  //const navbar = ({company}) => {

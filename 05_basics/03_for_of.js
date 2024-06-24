@@ -5,7 +5,7 @@
 
 // const array = [1 , 2 ,3, 4 , 5]
 
-// // for (const iterator of object) {
+// // for ( const iterator of object) {
     
 // // }
 
@@ -42,18 +42,18 @@ for (const key in map) {
 }
 
 
-// for (const [key , value] of map) {
-//     console.log(key, ':-' , value);
-//  }
-//  IN :- India
-//  USA :- unites states of America
+for (const [key , value] of map) {
+    console.log(key, ':-' , value);
+ }
+ IN :- India
+ USA :- unites states of America
 
-// const myObject = {
-//     'game1': 'NFS',
-//     'game2': 'spiderman'
-// }
+const myObject = {
+    'game1': 'NFS',
+    'game2': 'spiderman'
+}
 
-// for (const [key , value] of myObject) {
-//     console.log(key, ':-' , value);
-// }
+for (const [key , value] of myObject) {
+    console.log(key, ':-' , value);
+}
 // //object can't be iterable like this by using for of...

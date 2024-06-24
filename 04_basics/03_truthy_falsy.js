@@ -45,5 +45,5 @@
 
 // value aayi h to first agar nahi ayi h to >?? second 
 
-//ternary operator
-//condition ? expression1 (true): expresstion2 (false)
+// ternary operator
+// condition ? expression1 (true): expresstion2 (false)

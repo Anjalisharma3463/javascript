@@ -1,22 +1,23 @@
-//  let a = 300
+ let a = 300
 
-// //default value is false
-// if(true) {
-//     let a = 10
-//     const b = 20
-//     console.log("Inner: ", a); //10
+//default value is false
+if(true) {
+    let a = 10
+    const b = 20
+    console.log("Inner: ", a); //10
+    var c = 30;
  
-// }
+}
 
-// //console.log(a); // error // anar schope k
-// //console.log(b); // error
-//  //console.log(c); // print 30
+//console.log(a); // error // anar schope k
+//console.log(b); // error
+ //console.log(c); // print 30
 
 
-//  //var is global data type
-//  //console.log(a); // 300
+ //var is global data type
+ //console.log(a); // 300
 
-// // browser me aake scope alag hota h and node k through global schope alag h
+// browser me aake scope alag hota h and node k through global schope alag h
 
 
 function one(){
