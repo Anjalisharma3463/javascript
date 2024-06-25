@@ -2,19 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    document kis object model se bana hua h
-    console me jake console.log(window) likho ya fhir console.log(document)yaa  fhir console.dir(document) yaa fhir base url ka kisi or ko access krna h toh write console.log(document.baseURI) and document.getElementbyId('firstheading')
-    <title>DOM  Learnings</title>
-    you can change things by gui or cl also on webpaege by inspect --> document.getElementbyId('first heading').innerHTML = "<h1> chai or code </h1>"
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading" >DOM learning on chai or code</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus magni excepturi deserunt qui distinctio corporis velit numquam. Nobis natus quis earum fugit, tenetur est. Inventore eaque saepe est ratione totam!</p>
-         
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
     </div>
-</body>s
-</html>
+
+ HTML collection is not array . 
+     <script>
+        console.log(document)
+        console.dir(document); // hidden cheeje dikhegii
+        console.log(document.baseURI);
+        console.log(document.links); 
+        console.log(document.links[2]);
+        document.getElementById('firstheading') //text waapas kr dega is class ka ya id ka
+        document.getElementById('firstHeading').innerHTML = "<h1> chai or code anjali</h1>"  yaa fhir iski jagah shortcut to change something
+        
+        document.getElementById('title') //line of code de dega pura
+        document.getElementById('title').id
+        document.getElementById('title').className
+        document.getElementById('title').getAttribute
+        document.getElementById('title').getAttribute('class')
+        document.getElementById('title').setAttribute('class' , 'test') // undefined bolega but change hoga not in code but in inspect . override ho jata a h
+        const title = document.getElementById('title')
+        title
+        title.style.backgroundColor = 'green'
+        title.style.padding = '23px'
+         
+        title.textcontent // ye text deta h but jo discplay none h vo nahi
+        title.innerHTML // ye pura html ka code hi de deta h us particular idya class ka
+        title.innerText //ye pura text detaa h even bo bhi jo span me display none h
+
+        document.querySelector('h1') // ye first h1 hi dega line of cod dega
+        document.querySelectorAll('h1') // ye saare h1 de degaa
+
+        document.querySelectorAll('#title')
+        document.querySelectorAll('.heading')
+       document.querySelector('input[type="password"]')
+       document.querySelector('p:first-child')
+
+       const myul = document.querySelector('ul')
+        const turncolor =  myul.querySelector(  'li')
+         turncolor.style.color= "green"
+         turncolor.style.innerText = "five"
+         //nodelist and html collection pure array nahiii h
+        const templist = document.querySelectorAll('li') // saari list ko select kr liya h but ye array nahi and ye nodelist h
+        templist.style.color = 'green' // ye nahi hoga list pe
+        templistp[0].style.color =  ' green' // abh ye ho jayega first element ka
+        const myh1 = document.querySelectorAll('h1') // h1 yaha nodelist hi h code me
+        myh1.style.color =  'green' // ya nahi hogaaa
+         myh1[0].style.color = 'green' // /ab green ho jayega // sabka color change krne k liye ya to fo each loop ya fhi rarray me covert kro then color change kro array ka ya
+
+         templist.forEach( function (li) {
+            li.style.backgroundColor = 'green' // ab sab green ho jayegi
+         })
+
+          const tempclasslist = document.getElementsByClassName('list-item')
+          tempclasslist.forEach( function (li) {
+            console.log(li); // ye html collection h ispe foreach nahi chlgea so we need to convert this list to array
+          })  
+
+
+       const myarray  =  Array.from(tempclasslist)
+
+          myarray.forEach(function (li) {
+            console.log(li);
+          })
+           
+          
+
+          
+
+      
+     </script>
+</body>
+</html> 
 
 This is document obejct Model..
 
@@ -38,7 +120,7 @@ head      and                   body
  |           |                     |
  |           |                     |
  \/          \/                    \/
- text node  (attribute)  (attrivute<-h1 )    and   p -> text node
+ text node  (attribute)  (attribute <- h1 )    and   p -> text node
                                    | 
                                    \/  
                                 text code
