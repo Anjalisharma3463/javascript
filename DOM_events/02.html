@@ -17,23 +17,26 @@
 </body>
 <script>
     const parent = document.querySelector('.parent')
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1].innerHTML);
-
-    // for (let i = 0; i < parent.children.length; i++) {
-    //      console.log(parent.children[i].innerHTML);
+      console.log(parent); // now uwe use chlderen property
+     console.log(parent.children); // html collection milega jisme length and array lke str hota h // jisme inde honeg
+      console.log(parent.children[1].innerHTML); //  tuesday
+ 
+    for (let i = 0; i < parent.children.length; i++) {
+         console.log(parent.children[i].innerHTML);
         
-    // }
+    }
     parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild); // monday ka line of code
+    // console.log(parent.lastElementChild);  // monday ka  linr of g code
 
-    const dayOne = document.querySelector('.day')
-    // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
+    const dayOne = document.querySelector('.day') // pehla hi tag select hota h 
+    // console.log(dayOne);// so output is monday
+    // console.log(dayOne.parentElement); // pura parent d  elemnt 
+    // console.log(dayOne.nextElementSibling); // tuesday
 
-    console.log("NODES: ", parent.childNodes);
+    console.log("NODES: ", parent.childNodes); // nodelist (9) // pura structure bataega like text day with index .. jese comment , text , day m tags pura nodelist 
+
+//Behind the scene , browser complex str deta h .. even jab ek space deta h next line deta h ham tab vo bhi node lisst me contain hota h
 </script>
 </html>
+ 
