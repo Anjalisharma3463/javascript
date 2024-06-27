@@ -40,7 +40,7 @@ const books = [
     {title: 'book two' , genre: 'science', publish: 2323, edition: 2034},
 
 ];
-
+console.log(2+3);
 
 const userBooks = books.filter( (bk) => bk.genre == 'friction')
 console.log(userBooks);
