@@ -15,11 +15,14 @@
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
+        //issye pure tree ko travese krna padega
+        //yaha neeche attach kara h langage name ko class se (language)
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python")
     addLanguage("typescript")
 
+    //yaha tree ji ko traverse nahi krna h 
     function addOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
@@ -36,7 +39,7 @@
     secondLang.replaceWith(newli)
 
     //edit
-    const firstLang = document.querySelector("li:first-child")
+    const firstLang  = document.querySelector("li:first-child")
     firstLang.outerHTML = '<li>TypeScript</li>'
 
     //remove

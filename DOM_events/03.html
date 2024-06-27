@@ -10,17 +10,28 @@
     
 </body>
 <script>
+    // Creating nodelist by writting program 
+    //Ab khud ka div element create kara h // ab khud ki nodelist (tree strucutre ) banegii contaning test nodes with given no. of elements .
+
+
     const div = document.createElement('div')
     console.log(div);
     div.className = "main"
     div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
+    div.setAttribute("title", "generated title") //// default attributs to class . id h but custum attributes set hote by using setAttribute 
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
+    // div.innerText = "Chai aur code" 
+    // innerText reference lekar aata h then ovverride krta h valuses ko but setAttribute direct values ko set krta h to optimized h setattrivute method. one  round bachta h
 
-    document.body.appendChild(div)
+    const addText = document.createTextNode("Chai aur code")
+   
+    div.appendChild(addText)    
+       // nodelist k andar node hoti h to vahi create kri text node..
+ // node list me bhiot csaare children then list me to append kra diya child ko
+
+
+    document.body.appendChild(div) // ye link kara h nodelist ya code ko web se to show results in real/.
+
 </script>
 </html>
