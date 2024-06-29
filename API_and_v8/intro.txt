@@ -1,0 +1,11 @@
+API is  a talking language between two systems . 
+Between our frontend and our backend or , between another frontend our our backend, between our frontend or another backend, another frontend or another backent with same or digffernt languages
+
+eg:_
+github API:- api.github.com
+              randomuser.me
+               jsonplaceholder.typicode.com
+
+  To read APIs :-  json formatter .. or bhi h esi
+
+              

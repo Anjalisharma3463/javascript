@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+ 
+// const sayDate = (() => {
+//     console.log("hii :)");
+// }, 1000);
+
+//setinerval infinity times chlta h....
+
+// const sayDate = function(str){
+//         console.log(str, Date.now());       
+//  }
+//  const intervalId = setInterval(sayDate, 1000, "hi")
+  const startgame = document.querySelector('#start')
+  
+  function startPrinting() {
+    intervalId = setInterval(() => {
+      console.log("Hii :)");
+    }, 1000);
+  }
+ 
+  startgame.addEventListener('click', startPrinting)
+
+const stopsz = document.querySelector('#stop');
+ 
+      function stop() {
+        clearInterval(intervalId);
+      }
+      stopsz.addEventListener('click', stop)
+ 
+
+   
+</script>
+
+</html> 

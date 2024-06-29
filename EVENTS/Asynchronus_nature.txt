@@ -1,0 +1,28 @@
+Default javascript is a synchronus language and it is single threaded language
+
+execution context : - execute one line of codd at a time
+                  --  console by -> 1
+                 -- console by -> 2
+                 call stack and memory heap          
+        
+       each execution waits for the last one to complete before executing...
+
+
+Blocking code vs non- blocking code
+
+blocking code :--  block the flow of program --> read file synchronus
+Non-blocking code ::-- does not block execution --> Read file Async
+
+
+file reading is done through nodejs not by js coz  it has not so much power for 
+// data file me written ho gaya and we have sent messsage that registeration succssufll in non- blocking code
+
+
+
+
+APIs
+Fetch API
+
+
+
+

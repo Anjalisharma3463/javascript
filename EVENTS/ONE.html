@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl')"></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+//     WE should use event listern instead of above way and second way of using click event in html.WE
+
+//    document.getElementById('id').addEventListener('click', function(){} ,false) // vese default bhi false hi hota h . kuch bhi na do to
+
+//     document.getElementById('owl').addEventListener('click', function() {
+//         alert('owl clicked again')
+//     })
+
+      //attachEvent()
+    // jQuery - on (jquery framewoek like react)
+    // addevenlistern ki jagah .on in jquery
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+ 
+
+
+
+    //event propagation - two types - one is event bubbling and event capturing
+    //event propagation mean when false = event bubbling (up) ka neeche se uper jata h .. jese li se ul tak
+     // event capturing - up to down - bade se chote when true.
+     //see in given example;
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+
+    // }, false)
+ 
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        console.log('Event type:', event.type);
+  console.log('Timestamp:', event.timeStamp);
+  console.log('Default prevented:', event.defaultPrevented);
+  console.log('Target:', event.target);
+  console.log('Current target:', event.currentTarget);
+  console.log('Client X:', event.clientX);
+  console.log('Client Y:', event.clientY);
+  console.log('Screen X:', event.screenX);
+  console.log('Screen Y:', event.screenY);
+  console.log('Alt key pressed:', event.altKey);
+  console.log('Control key pressed:', event.ctrlKey);
+  console.log('Shift key pressed:', event.shiftKey);
+  e.stopPropagation()
+    }, false)
+    
+
+//     Here's a concise summary of key event properties in JavaScript:
+
+// type: The type of event (e.g., "click", "mouseover").
+// timestamp: The time at which the event was created.
+// defaultPrevented: A boolean indicating whether preventDefault() was called.
+// target: The element that triggered the event.
+// toElement: The element the pointer is moving towards.
+// srcElement: An alias for target (primarily for backward compatibility).
+// currentTarget: The element to which the event handler is attached.
+// clientX: The horizontal coordinate within the viewport.
+// clientY: The vertical coordinate within the viewport.
+// screenX: The horizontal coordinate relative to the screen.
+// screenY: The vertical coordinate relative to the screen.
+// altKey: A boolean indicating whether the Alt key was pressed.
+// ctrlKey: A boolean indicating whether the Control key was pressed.
+// shiftKey: A boolean indicating whether the Shift key was pressed.
+// keyCode: The code of the key that was pressed (deprecated, use code or key).
+// These properties help you understand and manipulate event data effectively.
+
+
+// Screen
+// Definition: The screen refers to the entire display area of a device, including any toolbars, borders, and other interface elements.
+// Context: When measuring properties like screenX and screenY, you are getting coordinates relative to the entire screen.
+// Viewport
+// Definition: The viewport is the portion of the web page currently visible in the browser window. It excludes the browser's interface elements like toolbars and scrollbars.
+
+
+//     document.getElementById('google').addEventListener('click',function(e){
+//         e.preventDefault();
+//         e.stopPropagation() // ul or li me jo bhi ho chalana hi nahi h .. google link ko open nahi karnaa
+//         console.log("google clicked");
+//     }, false)
+//    n  
+    
+//     document.querySelector('#images').addEventListener('click', function(e){
+//         console.log(e.target.tagName);
+//         if (e.target.tagName === 'IMG') {
+//             console.log(e.target.id);
+//             let removeIt = e.target.parentNode
+//             removeIt.remove()
+//         }
+    
+        
+    // })
+    
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>

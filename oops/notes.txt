@@ -1,0 +1,25 @@
+// javascript and classes
+
+// js me classes nahi hotiii h(SUGAR COATING ON PROTOTTYPE)
+
+// js is a prototype -based language. not functional or object oriented programming.a
+
+//  #OOPS :- COLLECTION OF PROPERTIES AND METHODS
+// eg:- 
+
+// why use OOP
+// parts of OOP
+// Object literal {}
+
+// Constructor function
+// Prototypes
+// Classes
+// Instances (new, this)
+// 4 pillars
+// Abstraction - eg:- fetch()
+//  Encapsulation:- wrapper laga denaa , kya aceess kr skte h kya nahii
+//   Inheritance
+//    Polymorphism
+
+
+

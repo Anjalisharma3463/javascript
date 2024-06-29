@@ -1,0 +1,68 @@
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+ 
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+   
+    xhr.open('GET', requestUrl) // ab oopen call hoga
+//    console.log(  'HERE'  );
+  
+    xhr.onreadystatechange = function(){
+
+        console.log(xhr.readyState); // 
+
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+           //current context k liye this.. 
+            
+            console.log(responseText); 
+            console.log(typeof data); // mostly url se respont  string me aata h but usko (object nahii / ye json data h na.) me convert krte h json.parse . ab output me object ayega.
+
+            console.log(data.followers); // undegined aayega if json.parse
+
+                 // console log or bhot saari API like document document ka part hi annahi h.. actual me ye console.log() debugging tool h browser ka developmenr tool . actual me ye js ka runtime inject krta h
+
+        }
+    }
+    xhr.send();
+
+// js ko browser or nodejs chlate h
+// node js implementation h v8 engine (c++) ka
+
+// Actual me v8  engine hii h jo saare debugging tool , api accesss like console .log
+
+
+
+//     0	UNSENT	Client has been created. open() not called yet.
+// 1	OPENED	open() has been called.
+// 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+// 3	LOADING	Downloading; responseText holds partial data.
+// 4	DONE	The operation is complete.
+
+
+
+
+    // fetch bhi use kar skte h for api request but in old time , ye karte the through html
+
+// xmlhttpRequest is used heavily ajax programming,
+
+// 0 unsent : no sent request
+// 1 opened : sent request only
+//  2 headers_recieved : header toa aa gaye but data ka pata nahi . kuch to aya 
+// 3 loading: respones to aya gya . data pura aaya ki nahi . kitana bada data h
+// 4 DONE: data sent and opperate successfully.
+
+</script>
+</html>
