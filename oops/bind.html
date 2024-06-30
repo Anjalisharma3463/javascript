@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick() {
+            console.log("button clicked /   form submitted");
+            console.log(this.server); // bina bind keyword use kare print nahi ho rha reference to h ..
+            console.log(this); // <button>Button clicked </button>
+        //this ko button ne hi call kya h uper . querySelector me
+        // bind use krke saare function . properties saath me chle gaye claass k  
+    }
+    }
+
+    const app = new React()
+</script>
+</html>

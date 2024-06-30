@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+        //Lexical scoping : inner functon have access to outer function variable
+    function init() {
+        let name = "Mozilla"; 
+        function displayName() {
+            console.log(name); 
+        }
+        displayName(); 
+    }
+    init();
+
+    function outer(){
+        let username = "hitesh"
+        console.log("OUTER", secret); // errror
+        function inner(){
+            let secret = "my123"
+            console.log("inner", username);
+        }
+        function innerTwo(){
+            console.log("innerTwo", username);
+            console.log(secret); // error
+        }
+        inner()
+        innerTwo()
+
+    }
+    outer()
+    console.log("TOO OUTER", username); // errror
+
+
+
+
+    // CLOSURE :-
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName; // // is function ka pura lexical scope jaaa rha h
+    }
+
+    const myFunc = makeFunc();
+    myFunc();  // is function ka pura lexical scope aa rha h
+
+    </script>
+    <script>
+      // solving problem with an example ... explaining closure and lexcial scoping with a problem and solutio nof it..
+
+        // closure:- inner function se outer function k scope ka access mil ata h at the creation time.
+        //  
+        document.getElementById("orange").onclick = function(){
+            document.body.style.backgroundColor = `orange`
+        }
+        document.getElementById("green").onclick = function(){
+            document.body.style.backgroundColor = `green`
+        }
+
+        function clickHandler(color){
+             document.body.style.backgroundColor = `${color}`
+ // neeche isfunction k paas uper line ka access h coz of lexical scoping...
+            return function(){          // ye iske binaa neeche bina button pe clock kre hi color ho jayegaa kyu ki bina return k on-click ko function nahii de rhe balki function execute hi kar rhe h.
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick =  clickHandler("green")
+
+
+        // Lexical scoping determines where variables and function definitions are accessible based on their physical location in the code.
+        // Closures allow functions to retain access to variables from their lexical scope, even after the outer function has completed execution
+
+    </script>
+</html>
