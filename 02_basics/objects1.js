@@ -52,3 +52,16 @@ const JsUser = {
 
   console.log(JsUser.greeting());
   console.log(JsUser.greetingtwo());
+
+
+
+
+//merging new property in objects
+
+const obj = {
+  key1: "value1",
+  age: "34"
+}
+
+let newobj = Object.assign( {} , obj, {name : "anjali"})
+console.log(newobj);

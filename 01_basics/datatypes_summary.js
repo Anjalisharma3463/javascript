@@ -28,7 +28,7 @@ const bigNumber = 5658435743985794358794759450347504570475040740n // now it is b
 
 // //object with storing values
 // let myobj = {
-//     name = " Anjla",
+//     name : " Anjla",
 //     age: 19,
 // }
 
@@ -72,6 +72,10 @@ let userone = { /// yaha userone stack me and all the below code goes to heap
     upi: "user@ybl"
 
 }
+
+// In JavaScript, non-primitive data types such as objects are stored in the heap, and variables holding these objects in the stack contain a reference to the memory location in the heap where the actual object is stored.
+//This means both userone and usertwo reference the same object in the heap. If you modify the object through either userone or usertwo, the change will be reflected when accessing the object through either variable:
+
 
 let user2 = userone 
 

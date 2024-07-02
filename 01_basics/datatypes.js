@@ -15,7 +15,7 @@
 // //big int 
 // //stiring => "" */
 // //boolean => true/false
-// //null => stand alone value //let state = null; null means empty not 0 
+// //null => stand alone value //let state = null; null means empty not 0 // it means no value
 // //undefined = like let state; 
 // //symbol => unique
 

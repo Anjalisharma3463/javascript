@@ -13,13 +13,17 @@ console.log(typeof(score));
 console.log(typeof valueInNumber); //Number
  console.log(valueInNumber); // NAN
 
- 
+const username  ="anjali"
+ users["name"] // right
+ users[name] // it is in-built
 
 //ALL THESE CONVERSION LIKE BOOLEAR , NUMBER ETC. are datatypes
 
   let isloggedIn = "anjali"
  let bolleanIsloggedin = Boolean(isloggedIn)// keep capital B capital b
  console.log(bolleanIsloggedin); // true
+
+ //any string that contains at least one character, regardless of its content, will convert to true.
        
 
          let somenumber = 33
@@ -30,3 +34,6 @@ console.log(typeof valueInNumber); //Number
          // if you convert string to number and then print it and output will be NaN.
          // but if you convert a number to string and then print it and then output will be that value (int).
          
+
+
+ 

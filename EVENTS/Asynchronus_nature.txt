@@ -17,12 +17,20 @@ Non-blocking code ::-- does not block execution --> Read file Async
 file reading is done through nodejs not by js coz  it has not so much power for 
 // data file me written ho gaya and we have sent messsage that registeration succssufll in non- blocking code
 
-
+//real use of callback function make sensen in asynchronus function not in sunchronus..
 
 
 APIs
 Fetch API
 
+all three are Asynschorus fn
+
+settimeout 
+fs.readfile
+Fetch 
+
+
+jab asynschronus function is counting time that is given to this to come in callback queue, so it will come only when stack is free. mtlb jab tak jo code neeche ka code chl rha ha tha vo puri thrh execute nahi ho jataaa.
 
 
 
