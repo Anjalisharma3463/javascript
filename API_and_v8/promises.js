@@ -225,6 +225,13 @@ p.then(function(){
 
 
 
+
+//reading filie synchronously
+const fs = require(  "fs")
+let data = fs.readFileSync("a.txt", "utf-8")
+console.log(data);
+console.log("after file read synchronously");
+
 //async and await
 
 function kirataSYNC(){
@@ -262,3 +269,18 @@ console.log('JENNY PAGAL H');
 
 // Asynce me toh oj value return hoke aat i hpromsise h use store kr lete h and then  callback functom me s stored val ko pass kr dete h
 //.then me vo khud pass krta h function me
+
+
+function sumOfsquares(a , b , fn){
+    let val1 = a*a;
+    let val2 = b *b;
+    fn(val1 + val2);
+}
+
+sumOfsquares(1, 2, function(value){
+    console.log(value);
+})
+//OR
+sumOfsquares(1 , 2 ).then(function(value){
+    console.log(value);
+})
