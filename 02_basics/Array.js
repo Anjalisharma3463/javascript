@@ -2,13 +2,35 @@
 // resizable and mix of data types. and can be array also inside array
 // make shallow copies.. means same reference point of al the object means.
 
+const arr1 = new Array(1, 2, 3);
+const arr2 = Array(4, 5,   4);
+const arr3 = [3, 4, 5];
 
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+// [ 1, 2, 3 ]
+// [ 4, 5, 4 ]
+// [ 3, 4, 5 ]
 
 const myarr1 = [0, 1, 2, 3 , 4 , 5]
 const myarr2 = [0 , 1 , 2 , "Array", true]
 const myHeroes = ["hero", "ssrk" ]
 const myarr3 = new Array(1, 2, 3, 4)
  //console.log(myarr2[3]);
+
+
+ const fish = ["Lion", , "Angel"];
+ ////////// [ 'Lion', <1 empty item>, 'Angel' ]
+//  Note that the second item is "empty", which is not exactly the same as the actual undefined value. When using array-traversing methods like Array.prototype.map, empty slots are skipped. However, index-accessing fish[1] still returns undefined.
+
+
+// In the following example, the length of the array is four, and myList[1] and myList[3] are missing. Only the last comma is ignored.
+// Copy to Clipboard
+// const myList = ["home", , "school", ,];
+
+
+
 
 
 // //array methods

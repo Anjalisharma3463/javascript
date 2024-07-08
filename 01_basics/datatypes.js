@@ -25,3 +25,38 @@
 // console.log(typeof null) // object
 // console.log(typeof age) //number
 // console.log(typeof undefined) // undefined
+
+
+
+
+
+/////var
+var x;
+console.log(x === undefined); // true
+x = 3;
+
+(function () {
+  var x;
+  console.log(x); // undefined
+  x = "local value";
+})();
+
+
+
+// abouve is same as same 
+console.log(x === undefined); // true
+var x = 3;
+
+(function () {
+  console.log(x); // undefined
+  var x = "local value";
+})();
+
+
+
+
+if (true) {
+    var x = 5;
+  }
+  console.log(x); // x is 5
+  

@@ -117,3 +117,24 @@ console.log(print);
  //Randonuserme.api
 //api k data (result ko smjhne k liye . we can use json formatter tools) 
 
+
+
+
+
+ 
+function listAllProperties(Math) {
+  let objectToInspect = Math;
+  let result = [];
+
+  while (objectToInspect !== null) {
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+    objectToInspect = Object.getPrototypeOf(objectToInspect);
+  }
+
+   console.log(result);
+}
+
+listAllProperties(Math)
+
+
+

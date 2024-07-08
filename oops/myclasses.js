@@ -43,3 +43,43 @@ const tea = new User("tea", "tea@gmail.com", "123")
 
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());
+
+
+
+
+
+
+
+//
+// Create an object
+const car = {
+    brand: 'Toyota',
+    model: 'Corolla'
+};
+
+// Define a method directly on the object
+car.startEngine = function() {
+    console.log(`${this.brand} ${this.model} engine started.`);
+};
+
+// Use the method
+car.startEngine(); // Output: Toyota Corolla engine started.
+
+
+
+
+const a = Math.PI
+console.log(a);
+
+ const b = Object.getOwnPropertyDescriptor(Math, 'PI')
+ console.log(b);
+
+
+ const h = Object.getOwnPropertyDescriptor(Array , 'length')
+ console.log(h);
+
+ console.log(Object.getOwnPropertyNames(Math));
+ console.log(Object.getPrototypeOf(Math));
+//[Object: null prototype] {}
+
+console.log(Object.getOwnPropertySymbols(Array));     //[ Symbol(Symbol.species) ]

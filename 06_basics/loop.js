@@ -13,8 +13,60 @@
 
 // console.log(values); //undefined
 
+//for - in loop shouldbe used o object only not on array
+// for =--of and for loop can be used for Array....
+//While for...in iterates over property names, for...of iterates over property values:
+
+const arr = [3, 5, 7];
+arr.foo = "hello";
+
+for (const i in arr) {
+  console.log(i);
+}
+// "0" "1" "2" "foo"
+
+for (const i of arr) {
+  console.log(i);
+}
+// Logs: 3 5 7
 
 
+// const obj = { foo: 1, bar: 2 };
+
+// for (const [key, val] of Object.entries(obj)) {
+//   console.log(key, val);
+// }
+// // "foo" 1
+// // "bar" 2
+
+
+// Such a function can be anonymous; it does not have to have a name. For example, the function square could have been defined as:
+
+ //Function \Expression
+// const square = function (number) {
+//   return number * number;
+// };
+
+// console.log(square(4)); // 16
+
+// In function Expression, we can also give name to the function
+const factorial = function fac(n) {
+    return n < 2 ? 1 : n * fac(n - 1);
+  };
+  
+  console.log(factorial(3)); // 6
+  
+
+  function map(f, a) {
+    const result = new Array(a.length);
+    for (let i = 0; i < a.length; i++) {
+      result[i] = f(a[i]);
+    }
+    return result;
+  }
+
+  map(cube , 2)
+  map.call(cube , 2)
 const myNums = [1 , 2 ,3 , 4 , 5 , 6 , 7 ,8 ,9,10]
 
 const newnums = myNums.filter( (num) =>   {num > 4 })

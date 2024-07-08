@@ -21,6 +21,46 @@
 // console.log(balance.toString().length); //3
 // console.log(balance.toFixed(2)); //100.00 precision value
 
+
+//yaha ham value ko bracket me pass krte h
+// console.log(Number(2)); //2
+// console.log(new Number(3)); //[Number: 3]
+
+//yaha object.prototype.function()
+//Number.prototype.toFixed()
+// const numObj = 77.1234;
+// console.log(numObj.toExponential()); // 7.71234e+1
+
+
+// // Define a constructor function
+// function Person(name) {
+//     this.name = name;
+// }
+
+// // Define a method on the prototype
+// Person.prototype.sayHello = function() {
+//     console.log(`Hello, my name is ${this.name}`);
+// };
+
+// // Create instances of Person
+// const alice = new Person('Alice');
+// const bob = new Person('Bob');
+
+// // Use the method
+// alice.sayHello(); // Output: Hello, my name is Alice
+// bob.sayHello();   // Output: Hello, my name is Bob
+
+
+
+// const a = new Number("123"); // a === 123 is false
+// const b = Number("123"); // b === 123 is true
+// a instanceof Number; // is true
+// b instanceof Number; // is false
+// typeof a; // "object"
+// typeof b; // "number"
+
+
+
 // const otherNumber = 1123.9485
  
 // // console.log(otherNumber.toPrecision(3)); //23.9 for 23.9484 number
