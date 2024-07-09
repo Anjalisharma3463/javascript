@@ -1,4 +1,6 @@
-// //  // const tinderuser = new Object() // singleton - object
+//
+//Technically the JavaScript programming language doesn’t have classes, but it does have constructors and prototypes which provide similar functionality.
+  //  // const tinderuser = new Object() // singleton - object
 const tinderuser = {} // non-single object
  
  tinderuser.id = "2213abc"
@@ -136,5 +138,147 @@ function listAllProperties(Math) {
 
 listAllProperties(Math)
 
+
+
+// #################################
+function Person(name) {
+  this.name = name;
+}
+// jab react or frameworlks me koi poroperty add krni ho hame
+Person.prototype.introduceSelf = function() {
+  console.log(`Hi! I'm ${this.name}.`);
+};
+
+const person1 = new Person("Alice");
+const person2 = new Person("Bob");
+
+person1.introduceSelf(); // Output: "Hi! I'm Alice"
+person2.introduceSelf(); // Output: "Hi! I'm Bob"
+
+// Modifying person1's name does not affect person2
+person1.name = "Charlie";
+person1.introduceSelf(); // Output: "Hi! I'm Charlie"
+person2.introduceSelf(); // Output: "Hi! I'm Bob"
+
+// Reason :::::
+// Memory Efficiency:
+
+// When you define methods directly within the constructor function, each instance of the object gets its own copy of those methods. This can consume more memory, especially if the methods are large or complex.
+// By defining methods on the prototype instead, all instances of the constructor function share the same method. This saves memory because the method is only stored once in memory and reused across all instances.
+// Performance:
+
+// Prototype methods can lead to better performance because JavaScript engines can optimize the prototype chain lookup. When you call a method on an instance, if the method is not found on the instance itself, JavaScript looks up the prototype chain to find it.
+// This lookup process is efficient and faster compared to copying methods to each instance, especially when dealing with a large number of instances or complex objects.
+// Dynamic Nature:
+
+// Methods defined on the prototype are dynamic, meaning you can modify or extend them at runtime. This is particularly useful for adding new functionality or modifying existing methods across all instances of a constructor function.
+// Inheritance:
+
+// Prototypes enable inheritance in JavaScript. You can create hierarchical relationships between objects using prototype chaining. Subclasses (objects that inherit from another object) can access methods defined on the prototype of their superclass.
+
+
+
+function func() {
+  let c = 1;
+  this.a = 100;
+}
+
+// Set the function prototype
+func.prototype.b = 200;
+
+// Create an object
+let obj = new func();         // function return something it will return that new. but if fun does not return nothign then new will return this,...
+//otherwise without this keyword will point to window object
+// its not a regular function when using new 
+
+
+// Display the result on console
+console.log(obj.a);
+
+console.log(obj.b);
+
+console.log(obj.c); // udefined
+
+// Explanation
+// Creating an Object with new:
+
+// The new keyword creates a new, empty object.
+// This new object’s prototype is set to func.prototype.
+// Prototype Property (b):
+
+// func.prototype.b = 200 adds a property b to the prototype.
+// Any object created using func will have access to b via the prototype.
+// Inside the Function (func):
+
+// let c = 1; defines a local variable c that is only accessible inside the function.
+// this.a = 100; adds property a to the new object.
+// Binding Properties:
+
+// The new keyword binds all properties and methods declared with this to the new object.
+// In func, only a is declared with this, so a becomes a property of the new object.
+// c is not declared with this, so it is not included in the new object.
+// Returning the New Object:
+
+// The function func does not explicitly return a value.
+// JavaScript automatically returns the newly created object (with properties a and b) at the end of the constructor function.
+
+
+
+Case 1: Constructor Function Returns an Object
+javascript
+Copy code
+function Person(name) {
+  this.name = name;
+  // Explicitly returning a different object
+  return { greeting: `Hello, my name is ${name}` };
+}
+
+const person = new Person("Alice");
+console.log(person); // Output: { greeting: "Hello, my name is Alice" }
+In this example, the Person constructor function returns an object with a greeting property. When we create a new Person instance with new Person("Alice"), the returned object { greeting: "Hello, my name is Alice" } becomes the result.
+
+Case 2: Constructor Function Returns a Primitive
+javascript
+Copy code
+function Animal(type) {
+  this.type = type;
+  // Explicitly returning a primitive value
+  return "This is a primitive return value";
+}
+
+const animal = new Animal("Cat");
+console.log(animal); // Output: Animal { type: "Cat" }
+In this example, the Animal constructor function returns a primitive value (a string). When we create a new Animal instance with new Animal("Cat"), the returned primitive value is ignored, and the newly created object Animal { type: "Cat" } is returned instead.
+
+Case 3: Constructor Function Doesn't Return Anything
+javascript
+Copy code
+function Car(model) {
+  this.model = model;
+  // No explicit return statement
+}
+
+const car = new Car("Tesla");
+console.log(car); // Output: Car { model: "Tesla" }
+In this example, the Car constructor function doesn't return anything explicitly. When we create a new Car instance with new Car("Tesla"), the newly created object Car { model: "Tesla" } is returned.
+
+
+function Car(color) {
+  if (!new.target) {
+    // Called as function.
+    return `${color} car`;
+  }
+  // Called with new.
+  this.color = color;
+}
+
+const a = Car("red"); // a is "red car"
+const b = new Car("red"); // b is `Car { color: "red" }`]
+
+console.log(a);
+console.log(b);
+
+red car
+Car { color: 'red' }
 
 
