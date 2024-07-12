@@ -27,6 +27,74 @@
 // This mechanism helps in writing more manageable and readable code for 
 
 
+function setAlarm() {
+  setTimeout(() => {
+    output.textContent = "Wake up!";
+  }, 1000);
+}
+// Our alarm() function will return a Promise that is fulfilled when the timer expires.
+
+button.addEventListener("click", setAlarm);
+
+
+// ############################
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
+
+function alarm(person, delay) {
+  return new Promise((resolve, reject) => {
+    if (delay < 0) {
+      throw new Error("Alarm delay must not be negative");
+    }
+    setTimeout(() => {
+      resolve(`Wake up, ${person}!`);
+    }, delay);
+  });
+}
+
+button.addEventListener("click", () => {
+  alarm(name.value, delay.value)
+    .then((message) => (output.textContent = message))
+    .catch((error) => (output.textContent = `Couldn't set alarm: ${error}`));
+});
+
+
+
+
+
+//usinf await
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
+
+function alarm(person, delay) {
+  return new Promise((resolve, reject) => {
+    if (delay < 0) {
+      throw new Error("Alarm delay must not be negative");
+    }
+    setTimeout(() => {
+      resolve(`Wake up, ${person}!`);
+    }, delay);
+  });
+}
+
+button.addEventListener("click", async () => {
+  try {
+    const message = await alarm(name.value, delay.value);
+    output.textContent = message;
+  } catch (error) {
+    output.textContent = `Couldn't set alarm: ${error}`;
+  }
+});
+
+
+// ###################################################################
+
+
+
 
 
 //WITHOUT USING PROMISE and await/sync
@@ -365,3 +433,19 @@ Reduce Method: .reduce((p, f) => p.then(f), Promise.resolve()) starts with Promi
 Final .then(): .then((result3) => { ... }) receives the result from the last function (func3) in the sequence. Here, you can use result3 for further processing.
 
 Error Handling: .catch((error) => { ... }) is used to catch any errors that might occur during the execution of any of the functions.
+
+
+
+
+// in await , whateven will be present after await line of code ,  program will wait and then whateven is after await will get printed but in then its oppostite program will not wait for promist to get resolved or error , it will print whateve is written after then/
+
+const API_CALL  = "https://api.github.com/users/Anjalisharma3463"
+
+async function handlepromise(){
+  const data = await fetch(API_CALL);
+
+  const jsonval = await data.json();
+  console.log(jsonval);
+}
+
+handlepromise();
