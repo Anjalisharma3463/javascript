@@ -97,3 +97,54 @@ Modern browsers support various storage mechanisms to persist data:
 LocalStorage: Stores data with no expiration date.
 SessionStorage: Stores data for the duration of the page session.
 IndexedDB: A low-level API for storing large amounts of structured data.
+
+
+
+
+
+
+
+
+############################
+// THIRD - PARTY APIs
+
+defer: This attribute tells the browser to load the script in the background while it continues to parse the HTML. The script will only run after the entire HTML document has been parsed. This helps improve page load performance and ensures the script doesn't block the loading of the rest of the page
+In this case, when the browser reaches the <script src="example.js"></script> tag, it will stop parsing the HTML and load the script. If the script is large or the network is slow, this could delay the rest of the page from displaying
+
+
+Browser APIs:
+
+Ask for user permission directly through prompts.
+Protect user privacy and security.
+Give users control over their data and device functionalities.
+Third-Party APIs:
+
+Use API keys for access control.
+Allow providers to monitor and manage usage.
+Help in enforcing usage limits and billing.
+Ensure accountability for developers using the API.
+Summary
+Browser APIs ask for permissions directly from the user to protect privacy and security.
+Third-Party APIs use API keys to control access, monitor usage, enforce quotas, and ensure accountability.
+
+
+
+This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a RESTful API — instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
+
+
+
+
+// Why Are We Creating That URL?
+// We are creating the URL to make a request to a web service, which will return data based on the parameters we provide. This is a common practice in web development when interacting with RESTful APIs to fetch or manipulate data.
+
+// What Is a RESTful API?
+// A RESTful API (Representational State Transfer API) is a way to allow systems to communicate over HTTP. RESTful APIs follow a set of conventions and principles to provide a standardized way of requesting and transferring data.
+
+// The Concept of RESTful APIs
+// Base URL: The endpoint where the API is hosted.
+// HTTP Methods: The operations to perform (GET, POST, PUT, DELETE, etc.).
+// Endpoints: Specific paths in the API that represent different resources.
+// Parameters: Data sent with the request to specify details or filters.
+
+let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
+// 
